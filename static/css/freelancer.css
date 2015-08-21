@@ -203,6 +203,10 @@ section.success a.active {
     }
 }
 
+#portfolio {
+    padding-top: 125px;
+}
+
 #portfolio .portfolio-item {
     right: 0;
     margin: 0 0 15px;
