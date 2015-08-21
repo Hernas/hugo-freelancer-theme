@@ -1,0 +1,24 @@
+{{ partial "_top.html" . }}
+<section id="blog">
+  <div class="container">
+  <h1 class="title">Blog</h1>
+    <div class="media">
+
+      {{ range .Data.Pages }}
+      <div class="media-left">
+        <div class="image" style="background-image: url({{ .Params.image }})"></div>
+      </div>
+      <div class="media-body">
+        <h3 class="media-heading"><a href="{{ .Permalink }}">{{ .Title }}</a>
+        </h3>
+        <h4>{{ .Date.Format "Mon, Jan 2, 2006" }}</h4>
+        {{.Summary}}
+      </div>
+      {{ end }}
+    </div>
+
+  </div>
+</section>
+
+
+{{ partial "_bottom.html" . }}

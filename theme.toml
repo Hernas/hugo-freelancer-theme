@@ -3,8 +3,8 @@ license = "Apache License 2.0"
 licenselink = "//github.com/digitalcraftsman/hugo-freelancer-theme/blob/master/LICENSE"
 description = "A one page HTML theme for freelancers."
 homepage = "//github.com/digitalcraftsman/hugo-freelancer-theme"
-tags = ["freenlancer", "portfolio"]
-features = ["responsive", "contact form", "portfolio", "substitutable strings"]
+tags = ["freenlancer", "portfolio", "blog"]
+features = ["responsive", "contact form", "portfolio", "substitutable strings", "blog"]
 min_version = 0.13
 
 [author]
