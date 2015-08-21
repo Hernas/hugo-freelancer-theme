@@ -1,16 +1,19 @@
-
 {{ partial "_top.html" . }}
-<section id="contact">
-    <div class="container">
-<div class="post">
-  <h1 class="post-title">{{ .Title }}</h1>
-  <span class="post-date">{{ .Date.Format "Mon, Jan 2, 2006" }}</span>
+<section id="blog">
+  <div class="container">
+    <div class="post">
+       {{if .Params.image}}
+      <div class="full-image" style="background-image: url({{ .Params.image }})"></div>
+      {{ end }}
+      <h1 class="title">{{ .Title }}</h1>
+
+      <h4>{{ .Date.Format "Mon, Jan 2, 2006" }}</h4>
       {{ .Content }}
 
-</div>
-        {{ partial "comments.html" . }}
-      </div>
-  </section>
+    </div>
+    {{ partial "comments.html" . }}
+  </div>
+</section>
 
 
 {{ partial "_bottom.html" . }}
