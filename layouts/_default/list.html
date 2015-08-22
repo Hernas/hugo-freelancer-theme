@@ -1,31 +1,37 @@
 {{ partial "_top.html" . }}
 <section id="blog">
   <div class="container">
-    <h1 class="title">Blog</h1>
-    <ul class="media-list">
-      {{ range .Data.Pages }}
-      <hr/>
-      <li class="media">
-        <h3 class="media-heading"><a href="{{ .RelPermalink }}">{{ .Title }}</a>
-          <small>{{ .Date.Format "Mon, Jan 2, 2006" }}</small>
-        </h3>
-        <div class="media-body">
-          {{if .Params.image}}
-          <div class="pull-left">
-            <div class="image" style="background-image: url({{ .Site.BaseURL }}img/{{ .Params.image }})"></div>
-          </div>
+    <div class="row">
+      <div class="col-md-1"></div>
+      <div class="col-md-10">
+        <h1 class="title">Blog</h1>
+        <ul class="media-list">
+          {{ range .Data.Pages }}
+          <hr/>
+          <li class="media post">
+            <h3 class="media-heading"><a href="{{ .RelPermalink }}">{{ .Title }}</a>
+              <small>{{ .Date.Format "Mon, Jan 2, 2006" }}</small>
+            </h3>
+            <div class="media-body">
+              {{if .Params.image}}
+              <div class="pull-left">
+                <div class="image" style="background-image: url({{ .Site.BaseURL }}img/{{ .Params.image }})"></div>
+              </div>
+              {{ end }}
+              {{.Summary}}
+            </div>
+            {{ if .Truncated }}
+            <div class="clearfix"></div>
+            <div class="text-center">
+              <a href="{{ .RelPermalink }}" class="btn btn-success">Read More</a>
+            </div>
+            {{ end }}
+          </li>
           {{ end }}
-          {{.Summary}}
-        </div>
-          {{ if .Truncated }}
-        <div class="clearfix"></div>
-          <div class="text-center">
-            <a href="{{ .RelPermalink }}" class="btn btn-success">Read More</a>
-          </div>
-          {{ end }}
-      </li>
-      {{ end }}
-    </ul>
+        </ul>
+      </div>
+      <div class="col-md-1"></div>
+    </div>
   </div>
 </section>
 
