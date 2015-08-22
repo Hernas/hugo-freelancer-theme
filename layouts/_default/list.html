@@ -16,10 +16,13 @@
           </div>
           {{ end }}
           {{.Summary}}
-          {{ if .Truncated }}
-          <a href="{{ .RelPermalink }}" class="btn btn-success">Read More</a>
-          {{ end }}
         </div>
+          {{ if .Truncated }}
+        <div class="clearfix"></div>
+          <div class="text-center">
+            <a href="{{ .RelPermalink }}" class="btn btn-success">Read More</a>
+          </div>
+          {{ end }}
       </li>
       {{ end }}
     </ul>
