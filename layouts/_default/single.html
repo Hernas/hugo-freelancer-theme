@@ -3,7 +3,7 @@
   <div class="container">
     <div class="post">
        {{if .Params.image}}
-      <div class="full-image" style="background-image: url({{ .Params.image }})"></div>
+      <div class="full-image" style="background-image: url({{ .Site.BaseURL }}img/{{ .Params.image }})"></div>
       {{ end }}
       <h1 class="title">
         {{ .Title }}

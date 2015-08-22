@@ -6,14 +6,18 @@
       {{ range .Data.Pages }}
       <hr/>
       <li class="media">
-        {{if .Params.image}}
-        <div class="media-left">
-          <div class="image" style="background-image: url({{ .Params.image }})"></div>
-        </div>
-        {{ end }}
+          <h3 class="media-heading"><a href="{{ .Permalink }}">{{ .Title }}</a>
+            <small>{{ .Date.Format "Mon, Jan 2, 2006" }}</small>
+          </h3>
         <div class="media-body">
-          <h3 class="media-heading"><a href="{{ .Permalink }}">{{ .Title }}</a> <small>{{ .Date.Format "Mon, Jan 2, 2006" }}</small></h3>
+          {{if .Params.image}}
+          <div class="pull-left">
+            <div class="image" style="background-image: url({{ .Site.BaseURL }}img/{{ .Params.image }})"></div>
+          </div>
+          {{ end }}
           {{.Summary}}
+          <a href="{{ .Permalink }}" class="btn btn-success">Read More</a>
+
         </div>
       </li>
       {{ end }}
