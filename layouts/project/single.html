@@ -7,9 +7,15 @@
         <hr class="star-primary">
         <img src="{{ .Site.BaseURL }}img/portfolio/{{ .Params.img2 }}" class="img-responsive img-centered" alt="">
 
-        <p>{{ .Content }}</p>
+        <div class="description">
+          <p>{{ .Content }}</p>
+        </div>
         <ul class="list-inline item-details">
-          <strong><a href="{{ .Params.link }}">{{ .Params.link }}</a>
+          <strong>
+            <a href="{{ .Params.link }}" class="ext-link">
+              <i class="fa fa-link"></i>
+              {{ replace (replace .Params.link "http://" "") "https://" "" }}
+            </a>
           </strong>
           </li>
         </ul>

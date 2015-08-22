@@ -241,10 +241,11 @@ section.success a.active {
 
     width: 100%;
     display: block;
-    height: 30px;
+    height: 55px;
+    line-height: 55px;
     text-align: center;
     font-weight: bold;
-    font-size: 1.1em;
+    font-size: 1.5em;
 }
 #portfolio .portfolio-item .portfolio-link:hover {
     text-decoration: none;
@@ -492,4 +493,24 @@ footer .footer-below {
     height: 230px;
     background-size: cover;
     background-position: center center;
+}
+
+/* Project */
+#project .ext-link {
+    font-size: 1.8em
+}
+#project .ext-link .fa {
+    color: #2C3E50;
+}
+
+#project .description {
+    padding: 20px 0px;
+}
+
+/* Highlight */
+.highlight {
+    background: none !important;
+}
+.highlight pre {
+    background: #272822;
 }
