@@ -5,12 +5,16 @@
        {{if .Params.image}}
       <div class="full-image" style="background-image: url({{ .Params.image }})"></div>
       {{ end }}
-      <h1 class="title">{{ .Title }}</h1>
+      <h1 class="title">
+        {{ .Title }}
+        <small>{{ .Date.Format "Mon, Jan 2, 2006" }}</small>
+      </h1>
 
-      <h4>{{ .Date.Format "Mon, Jan 2, 2006" }}</h4>
+      <hr />
       {{ .Content }}
 
     </div>
+    <hr />
     {{ partial "comments.html" . }}
   </div>
 </section>
