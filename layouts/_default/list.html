@@ -14,9 +14,7 @@
             </h3>
             <div class="media-body">
               {{if .Params.image}}
-              <div class="pull-left">
-                <div class="image" style="background-image: url({{ .Site.BaseURL }}img/{{ .Params.image }})"></div>
-              </div>
+              <div class="image" style="background-image: url({{ .Site.BaseURL }}img/{{ .Params.image }})"></div>
               {{ end }}
               {{.Summary}}
             </div>

@@ -3,6 +3,10 @@
 (function() {
     var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
     var disqus_shortname = '{{ .Site.Params.disqus }}';
+  {{ if isset .Params "dsq_thread_id" }}
+    var disqus_identifier = '{{ index .Params.dsq_thread_id 0 }}';
+  {{end}}
+
     dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
     (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
 })();
