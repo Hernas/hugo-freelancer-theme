@@ -516,6 +516,11 @@ footer .footer-below {
     padding: 20px 0px;
 }
 
+#project h2 {
+    font-size: 1.8em;
+    padding: 30px 0px 20px 0px;
+}
+
 /* Highlight */
 .highlight {
     background: none !important;
