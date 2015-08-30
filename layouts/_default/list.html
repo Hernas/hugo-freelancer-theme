@@ -4,14 +4,14 @@
     <div class="row">
       <div class="col-md-1"></div>
       <div class="col-md-10">
-        <h1 class="title">Blog</h1>
+        <h1 class="title text-center">Blog</h1>
+        <hr class="star-primary">
         <ul class="media-list">
           {{ range .Data.Pages }}
-          <hr/>
           <li class="media post">
-            <h3 class="media-heading"><a href="{{ .RelPermalink }}">{{ .Title }}</a>
+            <h2 class="media-heading"><a href="{{ .RelPermalink }}">{{ .Title }}</a><br />
               <small>{{ .Date.Format "Mon, Jan 2, 2006" }}</small>
-            </h3>
+            </h2>
             <div class="media-body">
               {{if .Params.image}}
               <div class="image" style="background-image: url({{ .Site.BaseURL }}img/{{ .Params.image }})"></div>
@@ -21,7 +21,7 @@
             {{ if .Truncated }}
             <div class="clearfix"></div>
             <div class="text-center">
-              <a href="{{ .RelPermalink }}" class="btn btn-success">Read More</a>
+              <a href="{{ .RelPermalink }}" class="btn btn-success btn-lg">Read More</a>
             </div>
             {{ end }}
           </li>
