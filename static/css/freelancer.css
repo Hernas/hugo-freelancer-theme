@@ -487,6 +487,7 @@ footer .footer-below {
     height: 230px;
     background-size: cover;
     background-position: center center;
+    margin-bottom: 40px;
 }
 #blog .media-body {
     line-height: 1.8em;
@@ -502,6 +503,14 @@ footer .footer-below {
 #blog .post h2 {
     padding: 100px 0px 20px 0px;
     font-size: 2.4em;
+}
+#blog .post {
+    line-height: 2.2em;
+}
+
+#blog .post ul {
+    font-size: 1.2em;
+    line-height: 2.2em;
 }
 
 /* Project */
